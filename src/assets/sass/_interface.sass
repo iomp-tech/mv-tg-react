@@ -1,0 +1,116 @@
+// interface
+*
+	margin: 0
+	padding: 0
+	outline: none
+	box-sizing: border-box
+
+	&::selection
+		background-color: #B4D5FE
+
+body
+	font-size: 15px
+	color: $black
+	overflow-y: scroll
+	background-color: $white
+
+	+regular
+
+// description
+p
+	line-height: 1.4em
+
+// wrapper
+.wrapper
+	width: 380px
+	margin: 0 auto
+
+// container
+.container
+	width: calc( 100% - 20px )
+	margin: 0 auto
+
+// btn
+.btn
+	width: 100%
+	
+	cursor: pointer
+	user-select: none
+	text-align: center
+	display: inline-block
+	border: none
+	font-size: 15px
+	background-color: $mainColor
+	color: $white
+	padding: 20px 40px
+	text-decoration: none
+
+	+transition
+	+borderRadius
+	+regular
+
+// input
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active
+	-webkit-box-shadow: 0 0 0 30px $white inset !important
+
+.input
+	width: 100%
+
+	&.error &__field
+		border: 1px solid $lightRed
+		color: $lightRed
+
+	&__field
+		width: 100%
+		border: 1px solid $black
+		background-color: transparent
+		font-size: 16px
+		color: $black
+		padding: 15px 20px
+
+		+borderRadius
+
+	&__error
+		margin-top: 3px
+		
+		font-size: 15px
+		color: $lightRed
+
+		display: block
+
+// thank
+.thank
+	margin: 25px 0
+	
+	text-align: center
+
+	+animateOpenPage
+
+	&__title
+		font-size: 24px
+		margin-bottom: 15px
+
+	&__description
+		font-size: 18px
+
+// loader
+.ball-pulse
+	display: flex
+	justify-content: center
+	margin: 100px 0 150px 0
+	+animateOpenPage
+
+	.loader
+		width: 200px
+		height: 200px
+
+	.ball
+		margin: 25% 0 0 25%
+		width: 50%
+		height: 50%
+		background-color: #CDCDF6
+		border-radius: 50%
+		animation: ballPulse 1s ease-in-out infinite

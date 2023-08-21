@@ -1,0 +1,157 @@
+// course-page
+.course-page
+	margin: 15px 0
+
+	+animateOpenPage
+
+	&-wrapper
+		width: calc( 100% - 20px )
+		margin: 0 auto
+
+		padding: 10px
+		border: 5px solid $lightGray
+
+		+borderRadius
+
+	&-back
+		top: 5px
+		position: sticky
+
+		display: flex
+		justify-content: center
+
+		margin-bottom: 15px
+
+		&__back
+			cursor: pointer
+
+			font-size: 16px
+			border: none
+			padding: 5px 10px
+			background-color: $white
+			color: $black
+			text-decoration: none
+
+			box-shadow: 0 0 75px rgba(0, 0, 0, 0.2)
+
+			+bold
+			+borderRadius
+
+	&-cover
+		&-image
+			width: 100%
+			height: 175px
+
+			border-radius: 100px
+
+			margin-bottom: 15px
+
+			+backgroundSetting
+			+borderRadius
+
+		&-video
+			width: 100%
+			border-radius: 100px
+			margin-bottom: 15px
+
+			+borderRadius
+
+			& iframe
+				width: 100%
+				height: 250px
+
+				+borderRadius
+
+		&-text
+			&__subtitle
+				font-size: 18px
+				margin-bottom: 5px
+
+			&__title
+				font-size: 26px
+				margin-bottom: 5px
+
+			&__description
+				font-size: 18px
+				margin-bottom: 15px
+
+			&__auth
+				font-size: 18px
+				margin-bottom: 25px
+
+				+bold
+
+			&__price
+				font-size: 24px
+				margin-bottom: 35px
+
+			&__btn
+				margin-bottom: 35px
+
+	&-form
+		&__title
+			font-size: 21px
+			margin-bottom: 15px
+
+		&-input
+			margin-bottom: 10px
+
+		&__btn
+			width: 100%
+
+	&-programm
+		margin-bottom: 30px
+
+		&__title
+			font-size: 24px
+			margin-bottom: 15px
+
+		&__description
+			width: 75%
+			font-size: 21px
+			margin-bottom: 15px
+
+		&-items-wrapper
+			background-color: $lightGray
+			border-radius: 15px
+
+		&-item
+			cursor: pointer
+			padding: 15px 15px 0 15px
+
+			overflow: hidden
+
+			border-bottom: 1px solid $gray
+
+			&:last-child
+				border: none
+
+			&-top
+				display: flex
+				justify-content: space-between
+				align-items: center
+
+				padding-bottom: 15px
+
+				&-text
+					&__subtitle
+						font-size: 21px
+						margin-bottom: 10px
+
+					&__title
+						font-size: 24px
+
+				&-arrow
+					+transition
+
+					&.rotate
+						transform: rotate(180deg)
+
+					& > svg
+						width: 25px
+
+			&-bottom
+				+transition
+
+				&__description
+					font-size: 21px

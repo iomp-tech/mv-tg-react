@@ -1,0 +1,45 @@
+// header
+.header
+	top: 0
+	position: sticky
+
+	padding: 10px 0
+
+	background-color: $white
+
+	z-index: 11
+
+	+animateOpenPage
+
+	&-wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&-logo
+		&__image
+			user-select: none
+			pointer-events: none
+
+			width: 100px
+
+	&-menu
+		&__link
+			display: inline-block
+
+			padding: 10px 15px
+
+			font-size: 18px
+			color: $mainColor
+			border: 1px solid $mainColor
+			text-decoration: none
+
+			+borderRadius
+			+transition
+
+			&:first-child
+				margin-right: 5px
+
+			&.active
+				background-color: $mainColor
+				color: $white
