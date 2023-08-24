@@ -11,8 +11,10 @@ const CoursePageProgramm: React.FC<CourseProgramm> = ({ title, description, item
 				<div className="course-page-programm-wrapper">
 					<h2 className="course-page-programm__title">{title}</h2>
 
-					<p className="course-page-programm__description">
-						{description}
+					<p
+						className="course-page-programm__description"
+						dangerouslySetInnerHTML={{ __html: description }}
+					>
 					</p>
 
 					<div className="course-page-programm-items-wrapper">

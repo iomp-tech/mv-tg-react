@@ -69,8 +69,10 @@ const ShopPageProgrammItem: React.FC<CourseProgrammItem> = ({ subtitle, title, d
 						}
 						: {}
 				}>
-				<p className="course-page-programm-item-bottom__description">
-					{description}
+				<p
+					className="course-page-programm-item-bottom__description"
+					dangerouslySetInnerHTML={{ __html: description }}
+				>
 				</p>
 			</div>
 		</div>
