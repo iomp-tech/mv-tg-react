@@ -39,7 +39,7 @@ const TimetablePage: React.FC = () => {
             .post(`${process.env.REACT_APP_API_AWO_DOMEN}/goods/subs`, {
                 email,
                 phone,
-                idAwo: itemById.idAwo,
+				idAwo: itemById.idAwo ? itemById.idAwo : 0,
                 message: "Заявка из ТГ бота",
                 telegram_user: user.username,
             })
